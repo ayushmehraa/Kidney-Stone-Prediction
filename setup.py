@@ -12,7 +12,7 @@ def find_packages(file_path)->List[str]:
         requirements.remove(HYPEN_DOT_E)
         
 setup(
-    name = "Zomato Bangalore Restaurants",
+    name = "Kidney Stone Prediction",
     author = "Ayush Mehra",
     version= "0.0.0",
     packages = find_packages("requiurements.txt")

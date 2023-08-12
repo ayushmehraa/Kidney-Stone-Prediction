@@ -19,19 +19,12 @@ def predict_datapoint():
 
     else:
         data = CustomData(
-            Airline = request.form.get('Airline'),
-            Source = request.form.get('Source'),
-            Destination = request.form.get('Destination'),
-            Total_Stops = request.form.get('Total_Stops'),
-            
-            journey_day = int(request.form.get('journey_day')),
-            journey_month = int(request.form.get('journey_month')),
-            Dep_Time_hour = int(request.form.get('Dep_Time_hour')),
-            Dep_Time_min = int(request.form.get('Dep_Time_min')),
-            Arrival_Time_hour = int(request.form.get('Arrival_Time_hour')),
-            Arrival_Time_min = int(request.form.get('Arrival_Time_min')), 
-            Dur_hours = int(request.form.get('Dur_hours')), 
-            Dur_mins = int(request.form.get('Dur_mins'))
+            gravity = int(request.form.get('gravity')),
+            ph = int(request.form.get('ph')),
+            osmo = int(request.form.get('osmo')),
+            cond = int(request.form.get('cond')),
+            urea = int(request.form.get('urea')),
+            calc = int(request.form.get('calc'))
         )
         pred_df = data.get_data_as_data_frame()
         print(data)
