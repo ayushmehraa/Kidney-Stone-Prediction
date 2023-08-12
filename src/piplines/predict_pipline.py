@@ -45,12 +45,12 @@ class CustomData:
     def get_data_as_data_frame(self):
         try:
              custom_data_input_dict = {
-                "gravity": [self.gravity],
-                "ph": [self.ph],
-                "osmo": [self.osmo],
+                "calc": [self.calc],
                 "cond": [self.cond],
-                "urea": [self.urea],
-                "calc": [self.calc]
+                "gravity": [self.gravity],
+                "osmo": [self.osmo],
+                "ph": [self.ph],
+                "urea": [self.urea]
             }
             
              return pd.DataFrame(custom_data_input_dict)

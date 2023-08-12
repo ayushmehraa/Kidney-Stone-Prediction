@@ -19,12 +19,12 @@ def predict_datapoint():
 
     else:
         data = CustomData(
-            gravity = int(request.form.get('gravity')),
-            ph = int(request.form.get('ph')),
-            osmo = int(request.form.get('osmo')),
+            calc = int(request.form.get('calc')),
             cond = int(request.form.get('cond')),
-            urea = int(request.form.get('urea')),
-            calc = int(request.form.get('calc'))
+            gravity = int(request.form.get('gravity')),
+            osmo = int(request.form.get('osmo')),
+            ph = int(request.form.get('ph')),
+            urea = int(request.form.get('urea'))
         )
         pred_df = data.get_data_as_data_frame()
         print(data)
@@ -36,5 +36,4 @@ def predict_datapoint():
         return render_template("predictdata.html",pred_df=pred_df, results=results)
     
 if __name__ == "__main__":
-    # app = Flask(__name__, template_folder='/template')
-    app.run(host = "0.0.0.0",debug = True, port=8080)
+    app.run(host = "127.0.0.1",port=8080,debug=True)
