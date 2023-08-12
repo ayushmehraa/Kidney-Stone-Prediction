@@ -1,0 +1,5 @@
+venv
+.env
+connect_database.py
+logs
+streamlit_app.py
