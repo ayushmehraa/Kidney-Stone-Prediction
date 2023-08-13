@@ -1,11 +1,11 @@
 <div align="center">
     <h1 align="center">
         <img width="80" height="80" src="https://img.icons8.com/officel/80/kidney.png" alt="kidney"/>
-        <br>Kidney Stone Prediction
+        <br>Student Performance Indicator Prediction
     </h1>
 </div>
 <h3 align="center">
-Predict Risk of Stone in your kidney with data and AI and plan keep safe.
+Predict student performance based by using data and A.I
 </h3>
 <br>
 <h3 align="center">
@@ -15,7 +15,6 @@ Technologies used.
 <p align="center">
         <img width="48" height="48" src="https://img.icons8.com/fluency/48/python.png" alt="python"/>
         <img width="48" height="48" src="https://img.icons8.com/fluency/48/jupyter.png" alt="jupyter"/>
-        <img width="48" height="48" src="https://img.icons8.com/dotty/80/228BE6/visible.png" alt="visible"/>
         <img width="48" height="48" src="https://img.icons8.com/color/48/brain-3.png" alt="brain-3"/>
         <img width="55" height="55" src="https://img.icons8.com/nolan/64/flask.png" alt="flask"/>
         <img width="48" height="48" src="https://img.icons8.com/ios-filled/50/22C3E6/html-filetype.png" alt="html-filetype"/>
@@ -25,43 +24,44 @@ Technologies used.
 </div>
 <br>
 
-# 🤖 Kidney Stone Prediction
+# 🤖 Student Performance Indicator Prediction
 
-This repository contains the code and resources for a machine learning project focused on predicting the likelihood of kidney stone formation based on urine analysis data. The dataset used in this project is the Kidney Stone Prediction based on Urine Analysis dataset sourced from Kaggle. The goal of this project is to develop a predictive model that can assist in identifying individuals who are at a higher risk of developing kidney stones based on their urine composition.
+Welcome to the Student Performance Indicator Prediction repository! This project aims to predict student performance indicators based on various features such as gender, ethnicity, parental education, lunch type, and test preparation. The dataset used in this project is sourced from Kaggle and contains information on math, reading, and writing scores.
 
 # 📁 Dataset
 
 The dataset used in this project can be downloaded from the following link:
-[Kidney Stone Prediction based on Urine Analysis Dataset](https://www.kaggle.com/competitions/playground-series-s3e12/data)
+[Student Performance Indicator dataset](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977)
 
-- Age: Age of the patient.
-- Gender: Gender of the patient (Male/Female).
-- CalciumOxalate: Level of calcium oxalate in urine.
-- UricAcid: Level of uric acid in urine.
-- CalciumPhosphate: Level of calcium phosphate in urine.
-- MagnesiumAmmoniumPhosphate: Level of magnesium ammonium phosphate in urine.
-- UrinepH: pH level of urine.
-- SpecificGravity: Specific gravity of urine.
-- KidneyStone: Target variable (0: No kidney stone, 1: Kidney stone present).
+- gender: Sex of the student (Male/Female).
+- race/ethnicity: Ethnicity of the student (Group A, B, C, D, E).
+- parental level of education: Parents' final education (Bachelor's degree, Some college, Master's degree, Associate's degree, High school).
+- lunch: Type of lunch before the test (Standard or Free/Reduced).
+- test preparation course: Completion status of the test = preparation course (Complete or Not Complete).
+- math score: Score obtained in the math test.
+- reading score: Score obtained in the reading test.
+- writing score: Score obtained in the writing test.
 
 
 # ⚒️ Project Structure
 The project is organized as follows:
 
-- data: This directory contains the dataset file (kidney_stone_dataset.csv).
-- static: This directory holds images and visual resources used in this templates.
-- notebooks: Jupyter notebooks used for data exploration, preprocessing, model training, and evaluation.
-- artifacts: contaions data, preprocessor and model pickle files.
+- artifacts: This directory contains important artifacts such as data, preprocessor, and model pickle files.
+- notebooks: Jupyter notebooks for data exploration and model training.
 - src: Source code for the project.
-EDA_Kidney stone.ipynb: Data exploration and preprocessing utilities.
-- model_training.ipypy: notebook for training machine learning models.
-- app.py: Flask web application for kidney stone prediction.
+- components: Contains Python files for data ingestion, transformation, and modeling.
+- pipeline: Houses the predict_pipeline.py file with prediction methods.
+- static: Images used in the Flask app template.
+- templates: HTML files for the Flask app.
+- app.py: Flask web application for student performance prediction.
+- requirements.txt: List of required dependencies.
+- setup.py: Setup script for the project.
 
 # 🚀 Getting Started
 
-- Clone this repository to your local machine using:
+1. Clone this repository to your local machine using:
 ```
-git clone https://github.com/yourusername/kidney-stone-prediction.git
+git clone https://github.com/yourusername/student-performance-prediction.git
 
 ```
 
@@ -71,9 +71,7 @@ git clone https://github.com/yourusername/kidney-stone-prediction.git
 pip install -r requirements.txt
 ```
 
-- Download the dataset (kidney_stone_dataset.csv) from the provided Kaggle link and place it inside the data directory.
-
-- Adjust the configuration in config.py as needed, including hyperparameters and file paths.
+- Download the dataset (student_performance_dataset.csv) from the provided Kaggle link and place it inside the artifacts/data directory.
 
 - Run the web application using:
 ```
@@ -83,7 +81,7 @@ python app.py
 - Access the web app by navigating to http://localhost:5000 in your web browser.
 
 # 📋 Results
-The web application provides users with an interface to input urine analysis data and receive predictions regarding their risk of kidney stone formation. The underlying model's performance can be further fine-tuned and analyzed using the provided Jupyter notebooks in the notebooks directory.
+The web application provides users with an interface to input student information and receive predictions regarding their performance indicators. The underlying model's performance can be further analyzed using the Jupyter notebooks in the notebooks directory.
 
 # 🤝 Contributors
 Feel free to contribute to this project by creating pull requests, reporting issues, or suggesting improvements. Your contributions are greatly appreciated!
